@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ray Developer — Portfolio</title>
+    <meta name="description" content="Professional portfolio for Ray Developer — projects, skills, contact." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shape shape-a" aria-hidden="true"></div>
+    <div class="bg-shape shape-b" aria-hidden="true"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <div class="mark">RD</div>
+                <div>
+                    <div style="font-weight: 700">Ray Developer</div>
+                    <div class="muted small">Frontend & Fullstack</div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#projects" class="muted">Projects</a></li>
+                    <li><a href="#skills" class="muted">Skills</a></li>
+                    <li><a href="#about" class="muted">About</a></li>
+                    <li><a href="#contact" class="btn">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="menuToggle" class="menu-toggle">☰</button>
+        </header>
+
+        <!-- Hero -->
+        <main>
+            <section class="hero">
+                <div class="hero-grid">
+                    <div>
+                        <div class="eyebrow reveal">Hi, my name is</div>
+                        <h1 class="reveal">
+                            Ray — I build delightful web experiences
+                            <span class="typed" id="typed"></span>
+                        </h1>
+                        <p class="intro reveal">
+                            I'm a web developer focused on building accessible, high-performance sites and apps. I design interfaces that feel fast and polished while keeping code maintainable.
+                        </p>
+
+                        <div class="cta reveal">
+                            <a class="btn primary" href="#projects">View my work</a>
+                            <a class="btn secondary" href="#contact">Hire me</a>
+                        </div>
+                    </div>
+
+                    <aside class="card reveal">
+                        <div style="display: flex; flex-direction: column; gap: 12px">
+                            <div class="info-row">
+                                <div>
+                                    <div class="muted">Experience</div>
+                                    <div style="font-weight: 700">4+ years</div>
+                                </div>
+                                <div>
+                                    <div class="muted">Availability</div>
+                                    <div style="font-weight: 700">Remote</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="muted">Recent tech</div>
+                                <div class="stack">
+                                    <div class="pill">HTML</div>
+                                    <div class="pill">CSS</div>
+                                    <div class="pill">JavaScript</div>
+                                    <div class="pill">Node.js</div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects">
+                <h2 class="reveal">Selected Projects</h2>
+                <div class="projects-grid">
+                    <a class="project reveal" href="#">
+                        <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Design System" />
+                        <span class="meta">Design System</span>
+                    </a>
+                    <a class="project reveal" href="#">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="E-commerce project" />
+                        <span class="meta">E-commerce</span>
+                    </a>
+                    <a class="project reveal" href="#">
+                        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Dashboard project" />
+                        <span class="meta">Dashboard</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="reveal">
+                <h2>Skills & Tools</h2>
+                <div class="skills">
+                    <div class="skill">
+                        <strong>HTML</strong><span class="muted">100%</span>
+                        <div class="bar"><i style="width: 100%"></i></div>
+                    </div>
+                    <div class="skill">
+                        <strong>CSS</strong><span class="muted">95%</span>
+                        <div class="bar"><i style="width: 95%"></i></div>
+                    </div>
+                    <div class="skill">
+                        <strong>JavaScript</strong><span class="muted">90%</span>
+                        <div class="bar"><i style="width: 90%"></i></div>
+                    </div>
+                    <div class="skill">
+                        <strong>Node.js</strong><span class="muted">75%</span>
+                        <div class="bar"><i style="width: 75%"></i></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="reveal">
+                <h2>About Me</h2>
+                <p class="muted">
+                    I'm Ray — a web developer who loves turning ideas into interfaces. I care about performance, accessibility, and developer experience. Outside of code I enjoy photography and open-source.
+                </p>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="reveal">
+                <h2>Contact</h2>
+                <div class="card contact-card">
+                    <form id="contactForm">
+                        <input name="name" placeholder="Your name" required />
+                        <input type="email" name="email" placeholder="you@example.com" required />
+                        <textarea name="message" rows="4" placeholder="Describe your project..."></textarea>
+                        <button type="submit" class="btn primary">Send message</button>
+                        <div id="formMsg" class="muted"></div>
+                    </form>
+
+                    <div class="contact-info">
+                        <div>
+                            <strong>Email</strong>
+                            <div class="muted">uchechukwuraymond25@gmail.com</div>
+                        </div>
+                        <div>
+                            <strong>Phone</strong>
+                            <div class="muted">+234 902 557 0128</div>
+                        </div>
+                        <div class="muted">Or message me on LinkedIn / Twitter</div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="muted">© 2025 Ray Developer. Built with ❤️</footer>
+        </main>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("9QAYY2rBnF0vf-UEO"); // 🔑 Replace with your Public Key
+        })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
