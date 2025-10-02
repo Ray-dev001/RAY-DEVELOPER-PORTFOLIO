@@ -1,22 +1,3 @@
-/* ====== Fix for mobile side spacing ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-/* Prevent images/sections from overflowing */
-img, video, iframe, section, div {
-  max-width: 100%;
-}
-
-/* ================= YOUR DESIGN CSS ================= */
 :root {
   --bg: #0f1724;
   --card: #0b1220;
@@ -85,6 +66,7 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 100vw; /* prevent nav from overflowing */
 }
 
 nav a {
@@ -134,9 +116,14 @@ nav a:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr; /* default mobile layout */
   gap: 40px;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr 380px;
+  }
 }
 
 h1 {
@@ -167,6 +154,8 @@ h1 {
   filter: blur(60px);
   opacity: 0.15;
   animation: float 8s ease-in-out infinite alternate;
+  max-width: 100vw; /* stop spilling outside screen */
+  overflow: hidden;
 }
 
 .shape-a {
@@ -222,6 +211,7 @@ h1 {
   display: block;
   transform: scale(1.05);
   transition: transform 0.5s ease;
+  max-width: 100%; /* prevent images from overflowing */
 }
 
 .project:hover img {
@@ -275,8 +265,13 @@ h1 {
 /* Contact */
 .contact-card {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr; /* default mobile */
   gap: 20px;
+}
+@media (min-width: 768px) {
+  .contact-card {
+    grid-template-columns: 1fr 300px;
+  }
 }
 
 .contact-info {
@@ -331,7 +326,6 @@ textarea:focus {
   .contact-card {
     grid-template-columns: 1fr;
   }
-
   nav ul {
     display: none;
     flex-direction: column;
@@ -344,11 +338,9 @@ textarea:focus {
     border-radius: var(--radius);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   }
-
   nav ul.show {
     display: flex;
   }
-
   .menu-toggle {
     display: block;
     font-size: 26px;
@@ -357,9 +349,10 @@ textarea:focus {
     color: white;
     cursor: pointer;
   }
-    }
+  }
 
                        
+
 
 
 
