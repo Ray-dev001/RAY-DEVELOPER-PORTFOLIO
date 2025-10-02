@@ -360,8 +360,87 @@ img, video, canvas {
 html, body {
   overflow-x: hidden !important;
   }
+/* Reset & global fix */
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important; /* kills side scroll */
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container fix */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px; /* safe padding */
+  overflow-x: hidden;
+}
+
+/* Background shapes fix */
+.bg-shape {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Hero grid responsive fix */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: center;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Projects grid fix */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contact card fix */
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+  }
                        
+
 
 
 
